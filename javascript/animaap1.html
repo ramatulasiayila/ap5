@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+       .row.content {height: 900px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height:300%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+    .bubble img{
+      width: 50px;
+      animation: bubble 7s linear infinite;
+      border-radius: 50%;
+  }
+  .bubble{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: absolute;
+      bottom :-200px;
+  }
+  @keyframes bubble{
+      0%{
+          transform: translateY(0);
+          opacity: 0;
+      }
+      50%{
+          opacity: 1;
+      }
+      70%{
+          opacity: 1;
+      }
+      100%{
+          transform: translateY(-80vh);
+          opacity: 0;
+      }
+  }
+  .bubble img:nth-child(1){
+      animation-delay: 3s;
+      width: 70px;
+  }
+  .bubble img:nth-child(2){
+      animation-delay: 5s;
+      width: 50px;
+  }
+  .bubble img:nth-child(3){
+      animation-delay: 1s;
+      width: 70px;
+  }
+  .bubble img:nth-child(4){
+      animation-delay: 4.5s;
+      width: 70px;
+  }
+  .bubble img:nth-child(5){
+      animation-delay: 3s;
+      width: 90px;
+  }
+  .bubble img:nth-child(6){
+      animation-delay: 6s;
+      width: 50px;
+  }
+  .bubble img:nth-child(7){
+      animation-delay: 2s;
+      width: 40px;
+  }
+  .bubble img:nth-child(8){
+      animation-delay: 5s;
+      width: 60px;
+  }
+  .bubble img:nth-child(9){
+      animation-delay: 7s;
+      width: 70px;
+  }
+  .bubble img:nth-child(10){
+      animation-delay: 5.5s;
+      width: 80px;
+  }
+  .bubble img:nth-child(11){
+      animation-delay: 4.3s;
+      width: 50px;
+  }
+  .bubble img:nth-child(12){
+      animation-delay: 3s;
+      width: 60px;
+  }
+  .bubble img:nth-child(13){
+      animation-delay: 5s;
+      width: 60px;
+  }
+  .bubble img:nth-child(14){
+      animation-delay: 4s;
+      width: 90px;
+  }
+  .hub {
+  width: 100px;
+  height: 50px;
+  background-color: red;
+  font-weight: bold;
+  position: relative;
+  animation: mymove 5s infinite;
+}
+
+#div1 {animation-timing-function: linear;}
+#div2 {animation-timing-function: ease;}
+#div3 {animation-timing-function: ease-in;}
+#div4 {animation-timing-function: ease-out;}
+#div5 {animation-timing-function: ease-in-out;}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 300px;}
+}
+/* Pull right and left  */
+div.nav-pills a:before, div.nav-pills a:after
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    background: #FFF;
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+div.nav-pills a:before
+{
+    left: 0px;
+} 
+
+div.nav-pills a:after
+{
+    right: 0px;
+}
+
+div.nav-pills a:hover:before, div.nav-pills a:hover:after
+{
+    width: 100%;
+}
+.grafico.bar-chart {
+  background: #3468AF;
+  padding: 0 1rem 2rem 1rem;
+  width: 100%;
+  height: 60%;
+  position: relative;
+  color: #fff;
+  font-size: 80%;
+}
+.bar-chart [class^='eje-'] {
+  padding: 0 1rem 0 2rem;
+  bottom: 1rem;
+}
+.bar-chart .eje-x {
+  bottom: 0;
+}
+ .bar-chart .eje-y li {
+  height: 20%;
+  border-top: 1px solid #fff;
+}
+.bar-chart .eje-x li {
+  width: 14%;
+  position: relative;
+  text-align: left;
+}
+.bar-chart .eje-x li i {
+  transform: rotatez(-45deg) translatex(-1rem);
+  transform-origin: 30% 60%;
+  display: block;
+}
+.bar-chart .eje-x li:before {
+  content: '';
+  position: absolute;
+  bottom: 1.9rem;
+  width: 70%;
+  right: 5%;
+  box-shadow: 3px 0 rgba(0,0,0,.1), 3px -3px rgba(0,0,0,.1);
+}
+.bar-chart .eje-x li:nth-child(1):before {
+  background: #E64C65;  
+  height: 570%;
+}
+.bar-chart .eje-x li:nth-child(2):before {
+  background: #11A8AB;  
+  height: 900%;
+}
+.bar-chart .eje-x li:nth-child(3):before {
+  background: #FCB150;  
+  height: 400%;
+}
+.bar-chart .eje-x li:nth-child(4):before {
+  background: #4FC4F6;  
+  height: 290%;
+}
+.bar-chart .eje-x li:nth-child(5):before {
+  background: #FFED0D;  
+  height: 720%;
+}
+.bar-chart .eje-x li:nth-child(6):before {
+  background: #F46FDA;  
+  height: 820%;
+}
+.bar-chart .eje-x li:nth-child(7):before {
+  background: #15BFCC;  
+  height: 520%;
+}
+
+
+  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row content bg-success">
+          <div class="col-sm-3 sidenav hidden-xs bg-success">
+            <img src="image1.jpg" style="width: 50px; height: 50px; border-radius: 30px;">
+            <ul class="nav nav-pills nav-stacked bg-primary text-white">
+              <li class="active"><a href="#section1">Dashboard</a></li>
+              <li><a href="https://www.w3schools.com/">one</a></li>
+              <li><a href="https://www.w3schools.com/">two</a></li>
+              <li><a href="https://www.w3schools.com/">three</a></li>
+              <li><a href="https://www.w3schools.com/">Age</a></li>
+              <li><a href="https://www.w3schools.com/">Gender</a></li>
+              <li><a href="https://www.w3schools.com/">Geo</a></li>
+              <li><a href="https://www.w3schools.com/">one</a></li>
+              <li><a href="https://www.w3schools.com/">two</a></li>
+              <li><a href="https://www.w3schools.com/">three</a></li>
+              <li><a href="https://www.w3schools.com/">Age</a></li>
+              <li><a href="https://www.w3schools.com/">Gender</a></li>
+              <li><a href="https://www.w3schools.com/">Geo</a></li>
+            </ul><br>
+          </div>
+          <br>
+          
+          <div class="col-sm-9">
+              <div class="well">
+              <div class="row">
+                  <div class="col-sm-6">
+                      Since early times, human beings have been trying to understand their surroundings. Early Indian philosophers classified matter in the form of five basic element. According to them everything, living or non- living, was made up of these five basic elements
+                      Since early times, human beings have been trying to understand their surroundings. Early Indian philosophers classified matter in the form of five basic element. According to them everything, living or non- living, was made up of these five basic elements.
+                  </div>
+                  <div class="col-sm-6">
+                      <!-- <img src="ima3.jpg" style="width: 200px; height: 150px; border-radius: 30px; margin: 5px;">  -->
+<!--    
+                      </div class="hub">
+                      <div id="div1">linear</div>
+                   <div id="div2">ease</div>
+                  <div id="div3">ease-in</div>
+                  <div id="div4">ease-out</div>
+                <!-- <div id="div5">ease-in-out</div> -->
+                 
+  <div class="bar-chart-block block">
+    <h2 class='titular'>By Country <span>*1000</span></h2>
+    <div class='grafico bar-chart'>
+       <ul class='eje-y'>
+         <li data-ejeY='60'></li>
+         <li data-ejeY='45'></li>
+         <li data-ejeY='30'></li>
+         <li data-ejeY='15'></li>
+         <li data-ejeY='0'></li>
+       </ul>
+       <ul class='eje-x'>
+         <li data-ejeX='37'><i>España</i></li>
+         <li data-ejeX='56'><i>Portugal</i></li>
+         <li data-ejeX='25'><i>Italia</i></li>
+         <li data-ejeX='18'><i>Grecia</i></li>
+         <li data-ejeX='45'><i>EE.UU</i></li>
+         <li data-ejeX='50'><i>México</i></li>
+         <li data-ejeX='33'><i>Chile</i></li>
+       </ul>
+    </div>
+  </div>
+
+                  </div>
+              </div>
+            
+            
+      
+         
+              <!-- <h4>Dashboard</h4>
+              <p>Some text..</p> -->
+            
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="well">
+                  <h4>heading</h4>
+                  <p>Since early times, human beings have been trying to understand their surroundings.</p> 
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="well">
+                  <h4>heading</h4>
+                  <p>Since early times, human beings have been trying to understand their surroundings</p> 
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="well">
+                  <h4>Sessions</h4>
+                  <p>10 Million Since early times, human beings have been trying to understand their surroundings</p> 
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="well">
+                  <h4>Bounce</h4>
+                  <p>30% Since early times, human beings have been trying to understand their surroundings</p> 
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="well">
+                  <p>Since early times, human beings have been trying to understand their surroundings</p> 
+                  <p>Since early times, human beings have been trying to understand their surroundings</p> 
+                   
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="well">
+                  <p>Since early times, human beings have been trying to understand their surroundings</p> 
+                  <p>Since early times, human beings have been trying to understand their surroundings</p> 
+      
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="well">
+                  <p>Since early times, human beings have been trying to understand their surroundings</p> 
+                  <p>Since early times, human beings have been trying to understand their surroundings</p> 
+                  
+              
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-8">
+                <div class="well">
+                  <p>the element 30% Since early times, human beings have been trying to understand their surroundings
+                      the 25 March feast which coincided with Palm Sunday that year. The theme of the hymn suits both occasions, in a spirit of longing expectation of an arrival
+                   s</p> 
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="well">
+                  <p>Text 30% Since early times, human beings have been trying to understand their surroundings
+                    
+                  </p> 
+                </div>
+              </div>
+            </div>
+            <div class="col-sm">
+                <div class="well">
+                  the 25 March feast which coincided with Palm Sunday that year. The theme of the hymn suits both occasions, in a spirit of longing expectation of an arrival. The hymn was paraphrased by a contemporary poet who retained its first and last stanzas unchanged, set as a chorale fantasia and the closing chorale, but transformed the inner stanzas into a sequence of alternating recitatives and arias. Bach scored the work for three vocal soloists, a four-part choir and a Baroque instrumental ensemble of two horns, two oboes da caccia, two solo violins (part pictured), strings and continuo. It is the last chorale cantata of his second cantata
+                </div>
+            </div>
+          </div>
+          </div>
+        
+      
+      <div class="bubble">
+        <img src="fish.jpg"/>
+        <img src="fish.jpg"/>
+        <img src="fish.jpg"/>
+        <img src="fish.jpg"/>
+        <img src="fish.jpg"/>
+        <img src="fish.jpg"/>
+        <img src="fish.jpg"/>
+        <img src="fish.jpg"/>
+        <img src="fish.jpg"/>
+        <img src="fish.jpg"/>
+        <img src="fish.jpg"/>
+        <img src="fish.jpg"/>
+
+        
+    
+    </div>
+    </div>
+    </div>
+   
+    
+</body>
+</html>

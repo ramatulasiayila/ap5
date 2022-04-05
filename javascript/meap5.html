@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<p id="demo">I will display when two, four, and six seconds have passed.</p>
+    <input type="button" value="click" onclick="alre()"/><br/><br/>
+    <input type="button" value="click" onclick="conf()"/><br/><br/> 
+    <p>JavaScript setTimeout Demo</p>
+    <button onclick="showAlert();">Show</button>
+    <button onclick="cancelAlert();">Cancel</button>
+
+    <!-- <input type="button" value="click" onclick="seti()"/>  -->
+    <script>
+   function alre(){
+       var m = 
+
+       alert();
+
+   }
+   function conf(){
+       var con = confirm("are you sure?");
+       if(con==true){
+           alert("ok")
+       }
+       else{
+           alert("cancel")
+
+
+       }
+   }
+
+//    function seti(){
+//        console.log("hello here")
+//    }
+//    setTimeout(seti,2000);
+var timeoutID;
+
+function showAlert() {
+    timeoutID = setTimeout(alert, 3000, 'setTimeout Demo!');
+}
+
+function clearAlert() {
+    clearTimeout(timeoutID);
+}
+
+   
+
+
+setInterval(myTimeout1, 2000) 
+myname = setInterval(myTimeout2, 4000) 
+setInterval(myTimeout3, 6000) 
+
+function myTimeout1() {
+  document.getElementById("demo").innerHTML = "2 seconds";
+  document.getElementById("demo").style.backgroundColor = "red";
+
+}
+function myTimeout2() {
+  document.getElementById("demo").innerHTML = "4 seconds";
+  document.getElementById("demo").style.backgroundColor = "green";
+
+clearInterval(myname)
+}
+function myTimeout3() {
+  document.getElementById("demo").innerHTML = "6 seconds";
+  document.getElementById("demo").style.backgroundColor = "yellow";
+}
+
+</script>
+</body>
+</html>
